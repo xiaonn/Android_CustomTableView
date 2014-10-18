@@ -46,9 +46,6 @@ public class MainActivity extends Activity implements CellButtonClick{
 		//更改数据源
 		HashMap<String, Object> map = (HashMap<String, Object>) adapter.getItem(position);
 		map.put("info", "i love ios&android");
-		//获取视图组建变更视图
-		CellModel model = (CellModel)listView.getChildAt(position).getTag();
-		model.title.setHeight(0);
 		
 		adapter.notifyDataSetChanged();//刷新listView
 	}
